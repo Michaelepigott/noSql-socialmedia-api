@@ -34,7 +34,7 @@ module.exports = {
             user.thoughts.push(thought);
             await user.save();
 
-            res.json(thought);
+            await res.json(thought);
         } catch (err) {
             return res.status(500).json(err);
         }
